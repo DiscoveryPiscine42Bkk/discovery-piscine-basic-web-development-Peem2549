@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <title>Responsive Table</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    table {
+      width: 100vw;
+      height: 100vh;
+      border-collapse: collapse;
+      table-layout: fixed; 
+    }
+    td {
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2vw; 
+      font-family: sans-serif;
+      word-wrap: break-word;
+      padding: 1vw;
+    }
+    .cell1 { background-color: #2f4f4f; }
+    .cell2 { background-color: #696969; }
+    .cell3 { background-color: #bdb76b; }
+    .cell4 { background-color: #ffd700; }
+    .cell5 { background-color: #4682b4; }
+    @media (max-width: 768px) {
+      table {
+        display: block;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+      }
+      td {
+        font-size: 4vw;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="cell1">Dark Slate Grey</td>
+      <td class="cell2">Dim Grey</td>
+      <td class="cell3">Dark Khaki</td>
+      <td class="cell4">Gold</td>
+      <td class="cell5">Steel Blue</td>
+    </tr>
+  </table>
+</body>
+</html>
