@@ -22,14 +22,32 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
 }
-
 /* Top-level menu */
 .menu {
   list-style: none;
   display: flex;
   flex-direction: row;
 }
-
+.toggle {
+  display: none;
+}
+.menu-item > label {
+  display: block;
+  padding: 15px 25px;
+  background-color: lavender;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.menu-item > label:hover {
+  background-color: #ddd;
+}
+.menu-item .dropdown {
+   display: none;
+}
+.menu-item > .toggle:checked + label + .dropdown {
+  display: block;
+}
 .menu > li {
   position: relative;
 }
